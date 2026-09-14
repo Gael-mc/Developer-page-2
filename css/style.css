@@ -1,0 +1,57 @@
+/*Uniformidad paralos navegadores*/
+
+html{
+    font-size: 67.5%;
+}
+
+body{
+    font-size: 16px;
+}
+
+.my-title{
+    text-align: center;
+    font-size: 3.8rem;
+}
+
+.my-title span {
+    font-size: 2rem;
+}
+
+:root{
+    --blanco:#fff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #26939f;
+    --gris: #757575;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+    
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+    
+}
+
+.navegacion-principal  {
+    background-color: var(--secundario);
+    /* Flexbox: Define como alinear alementos */
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold /* Negritas */;
+    font-size: 2rem;
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem;   
+}
+
+.contenedor{
+    width: 120rem;
+    margin: 0 auto;    
+}
