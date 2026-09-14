@@ -1,14 +1,34 @@
-/*Uniformidad paralos navegadores*/
-
-html{
-    font-size: 67.5%;
+:root {
+    --blanco: #fff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #26939f;
+    --gris: #757575;
 }
 
-body{
-    font-size: 16px;
+/* Truco para uniformidad en textos entre navegadores */
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    box-sizing: border-box;
 }
 
-.my-title{
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Krub', sans-serif;
+    line-height: 1.5;
+}
+
+.contenedor {
+    max-width: 130rem;
+    width: 90%;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.my-title {
     text-align: center;
     font-size: 3.8rem;
 }
@@ -17,41 +37,26 @@ body{
     font-size: 2rem;
 }
 
-:root{
-    --blanco:#fff;
-    --oscuro: #212121;
-    --primario: #ffc107;
-    --secundario: #26939f;
-    --gris: #757575;
-}
-
-.nav-bg{
+.nav-bg {
     background-color: var(--secundario);
-    
 }
 
-.navegacion-principal a:hover {
-    background-color: var(--primario);
-    color: var(--oscuro);
-    
-}
-
-.navegacion-principal  {
-    background-color: var(--secundario);
-    /* Flexbox: Define como alinear alementos */
+.nav-principal {
+    /* Flexbox define cómo alinear elementos */
     display: flex;
-    justify-content: space-between;
-    font-weight: bold /* Negritas */;
-    font-size: 2rem;
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    font-weight: bold;
+    font-size: 1.6rem;
 }
 
-.navegacion-principal a {
+.nav-principal a {
     color: var(--blanco);
     text-decoration: none;
-    padding: 1rem;   
+    padding: 1.6rem;
 }
 
-.contenedor{
-    width: 120rem;
-    margin: 0 auto;    
+/* Cuando pongo el cursor encima del enlace, cambia el color de fondo */
+.nav-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
 }
